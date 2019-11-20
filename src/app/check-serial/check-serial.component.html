@@ -1,0 +1,54 @@
+<hr />
+<hr />
+<hr />
+<hr />
+<hr />
+
+<div class="space-nav">
+  <div class="container">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body">
+              <h3>Product details:</h3>
+              <ul>
+                <li>
+                  <p>Name: {{ (chain$ | async)?.name }}</p>
+                </li>
+                <li>
+                  <p>
+                    Manufacturer: {{ (chain$ | async)?.manufacturer?.name }}
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3"></div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div
+        *ngFor="let block of (chain$ | async)?.blocks; let i = index"
+        class="row"
+      >
+        <div class="card w-100 mt-3 asdf">
+          <div class="card-body">
+            <p>Timestamp: {{ block?.timestamp | date: "M/d/yy, HH:mm" }}</p>
+            <p>Issuer: {{ block.issuer }}</p>
+            <p>new Owner: {{ block.newOwner }}</p>
+            <p>Product: {{ block.data }}</p>
+            <p>Product ID: {{ block.dataID }}</p>
+            <p>Amount: {{ block.amount }}</p>
+            <p>Value: {{ block.value }}</p>
+            <p>Previous Hash: {{ block.prevHash }}</p>
+            <p>Hash: {{ block.hash }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

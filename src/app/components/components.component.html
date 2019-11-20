@@ -1,0 +1,261 @@
+<div class="wrapper">
+  <div
+    class="page-header section-dark"
+    style="background-image: url('assets/img/antoine-barres.jpg')"
+  >
+    <div class="filter"></div>
+    <div class="content-center">
+      <div class="container">
+        <div class="title-brand">
+          <!-- <div class="angular-logo">
+                        <img src="assets/img/angular2-logo.png" alt="">
+                    </div> -->
+          <h1 class="presentation-title">Blockchain architecture</h1>
+          <div class="fog-low">
+            <img src="assets/img/fog-low.png" alt="" />
+          </div>
+          <div class="fog-low right">
+            <img src="assets/img/fog-low.png" alt="" />
+          </div>
+        </div>
+
+        <h2 class="presentation-subtitle text-center">
+          A blockchain based architecture in manufacturing
+        </h2>
+      </div>
+    </div>
+    <div
+      class="moving-clouds"
+      style="background-image: url('assets/img/clouds.png'); "
+    ></div>
+  </div>
+
+  <div class="main">
+    <div class="section text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 mr-auto ml-auto">
+            <h2 class="title">The product</h2>
+            <h5 class="description">
+              A blockchain based architecture to increase trustability and
+              transparency in manufacturing
+            </h5>
+            <br />
+            <!-- <a [routerLink]="['logged']" class="btn btn-danger btn-round"
+              >See Details</a
+            > -->
+          </div>
+        </div>
+        <br /><br />
+        <div class="row">
+          <div class="col-md-3">
+            <div class="info">
+              <div class="icon icon-danger">
+                <i class="nc-icon nc-zoom-split"></i>
+              </div>
+              <div class="description">
+                <h4 class="info-title">Supply Chain partners</h4>
+                <p class="description">
+                  Add your partners in the platform to better understand your
+                  own supply chain.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="info">
+              <div class="icon icon-danger">
+                <i class="nc-icon nc-basket"></i>
+              </div>
+              <div class="description">
+                <h4 class="info-title">Buy and sell products</h4>
+                <p>
+                  Each partner has an inventory of what they are currently
+                  selling. Buy and sell to your supply chain participants.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="info">
+              <div class="icon icon-danger">
+                <i class="nc-icon nc-paper"></i>
+              </div>
+              <div class="description">
+                <h4 class="info-title">Immutable data</h4>
+                <p>
+                  Transactions are recorded and compiled into blocks, with each
+                  block having a hash and the previous block's hash to insure
+                  immutability
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="info">
+              <div class="icon icon-danger">
+                <i class="nc-icon nc-glasses-2"></i>
+              </div>
+              <div class="description">
+                <h4 class="info-title">Transparency</h4>
+                <p>
+                  Your customer is able to see which transactions have been part
+                  of their final product.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br /><br />
+        <br /><br />
+        <br /><br />
+        <div class="d-flex justify-content-around">
+          <div class="col-md-3">
+            <div class="info">
+              <div class="icon icon-danger">
+                <i class="nc-icon nc-spaceship"></i>
+              </div>
+              <div class="description">
+                <h4 class="info-title">Company area</h4>
+                <p class="description">
+                  Register / Login to start using the platform
+                </p>
+                <a routerLink="/auth" class="btn btn-link btn-danger">Go</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="info">
+              <div class="icon icon-danger">
+                <i class="nc-icon nc-single-copy-04"></i>
+              </div>
+              <div class="description">
+                <h4 class="info-title">Customer area</h4>
+                <p class="description">
+                  Enter your serial key to inspect your product
+                </p>
+                <form #getForm="ngForm" (ngSubmit)="getFinal(getForm.value)">
+                  <div class="form-row">
+                    <div class="form-group col-md-12">
+                      <label>Product serial:</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="name"
+                        name="name"
+                        required
+                        ngModel
+                      />
+                    </div>
+                  </div>
+                  <button
+                    class="btn btn-danger btn-round"
+                    type="submit"
+                    [disabled]="!getForm.valid"
+                  >
+                    Get info
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <hr width="1" size="500"> -->
+    </div>
+
+    <div class="section section-dark text-center">
+      <div class="container">
+        <h2 class="title">The team</h2>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card card-profile card-plain">
+              <div class="card-avatar">
+                <a href="#avatar"
+                  ><img src="src/assets/img/jose-barata.jpg" alt="..."
+                /></a>
+              </div>
+              <div class="card-block">
+                <a href="#paper-kit">
+                  <div class="author">
+                    <h4 class="card-title">José Barata</h4>
+                    <h6 class="card-category">Professor @ NOVA-FCT</h6>
+                  </div>
+                </a>
+                <p class="card-description text-center"></p>
+              </div>
+              <div class="card-footer text-center">
+                <!-- <a href="#pablo" class="btn btn-link btn-just-icon btn-neutral"><i class="fa fa-twitter"></i></a>
+                            <a href="#pablo" class="btn btn-link btn-just-icon btn-neutral"><i class="fa fa-google-plus"></i></a> -->
+                <a
+                  href="https://www.linkedin.com/in/jos%C3%A9-barata-882678/"
+                  target="_blank"
+                  class="btn btn-link btn-just-icon btn-neutral"
+                  ><i class="fa fa-linkedin"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card card-profile card-plain">
+              <div class="card-avatar">
+                <a href="#avatar"
+                  ><img src="src/assets/img/andre.jpeg" alt="..."
+                /></a>
+              </div>
+              <div class="card-block">
+                <a href="#paper-kit">
+                  <div class="author">
+                    <h4 class="card-title">André Rocha</h4>
+                    <h6 class="card-category">Reasearcher CTS-Uninova</h6>
+                  </div>
+                </a>
+                <p class="card-description text-center"></p>
+              </div>
+              <div class="card-footer text-center">
+                <!-- <a href="#pablo" class="btn btn-link btn-just-icon btn-neutral"><i class="fa fa-twitter"></i></a>
+                            <a href="#pablo" class="btn btn-link btn-just-icon btn-neutral"><i class="fa fa-google-plus"></i></a> -->
+                <a
+                  href="https://www.linkedin.com/in/andr%C3%A9-dionisio-rocha-93996265/"
+                  target="_blank"
+                  class="btn btn-link btn-just-icon btn-neutral"
+                  ><i class="fa fa-linkedin"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card card-profile card-plain">
+              <div class="card-avatar">
+                <a href="#avatar"
+                  ><img src="src/assets/img/0.jpeg" alt="..."
+                /></a>
+              </div>
+              <div class="card-block">
+                <a href="#paper-kit">
+                  <div class="author">
+                    <h4 class="card-title">Diogo Farinha</h4>
+                    <h6 class="card-category">Bachelor in engineering</h6>
+                  </div>
+                </a>
+                <p class="card-description text-center"></p>
+              </div>
+              <div class="card-footer text-center">
+                <!-- <a href="#pablo" class="btn btn-link btn-just-icon btn-neutral"><i class="fa fa-twitter"></i></a>
+                            <a href="#pablo" class="btn btn-link btn-just-icon btn-neutral"><i class="fa fa-google-plus"></i></a> -->
+                <a
+                  href="https://www.linkedin.com/in/d-farinha/"
+                  target="_blank"
+                  class="btn btn-link btn-just-icon btn-neutral"
+                  ><i class="fa fa-linkedin"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,85 @@
+<div class="wrapper">
+  <div
+    class="page-header"
+    style="background-image: url('./assets/img/login-image.jpg');"
+  >
+    <div class="filter"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-sm-6 mr-auto ml-auto">
+          <div class="card card-register">
+            <h3 class="title">Sign in</h3>
+
+            <form
+              class="register-form"
+              #authForm="ngForm"
+              (ngSubmit)="onSubmit(authForm)"
+            >
+              <label>Email</label>
+              <div
+                class="input-group form-group-no-border"
+                [ngClass]="{ 'input-group-focus': focus === true }"
+              >
+                <div class="input-group-prepend">
+                  <span class="input-group-text">
+                    <i class="nc-icon nc-email-85"></i>
+                  </span>
+                </div>
+
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Email"
+                  (focus)="focus = true"
+                  (blur)="focus = false"
+                  id="email"
+                  required
+                  ngModel
+                  name="email"
+                />
+              </div>
+
+              <label>Password</label>
+              <div
+                class="input-group form-group-no-border"
+                [ngClass]="{ 'input-group-focus': focus1 === true }"
+              >
+                <div class="input-group-prepend">
+                  <span class="input-group-text">
+                    <i class="nc-icon nc-key-25"></i>
+                  </span>
+                </div>
+                <input
+                  type="password"
+                  id="password"
+                  class="form-control"
+                  placeholder="Password"
+                  (focus)="focus1 = true"
+                  (blur)="focus1 = false"
+                  required
+                  ngModel
+                  name="password"
+                />
+              </div>
+              <button
+                class="btn btn-danger btn-block btn-round"
+                type="submit"
+                [disabled]="!authForm.valid"
+              >
+                Sign in
+              </button>
+            </form>
+            <div class="forgot">
+              <a class="btn btn-link btn-transparent" routerLink="/signup"
+                >Register</a
+              >
+              <a class="btn btn-link btn-transparent" routerLink="/home"
+                >Home</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

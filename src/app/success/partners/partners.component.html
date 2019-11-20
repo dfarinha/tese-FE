@@ -1,0 +1,83 @@
+<div class="space-nav"></div>
+<div class="row">
+  <div class="col-md-3"></div>
+  <div class="col-sm-12 col-md-6">
+    <h1>Your partners</h1>
+
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card card-plain">
+          <div class="card-header">
+            <h4 class="card-title">
+              Click on a partner to get more information
+            </h4>
+            <p class="card-category">You can also add a partner by email</p>
+          </div>
+          <div class="card-body">
+            <table class="table table-hover">
+              <thead class=" text-primary">
+                <th>#</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Location</th>
+              </thead>
+              <tbody>
+                <tr
+                  [routerLink]="['/profile/' + item._id]"
+                  *ngFor="
+                    let item of (loadedPosts$ | async)?.partners;
+                    let i = index
+                  "
+                >
+                  <th>{{ i + 1 }}</th>
+                  <td>{{ item?.name }}</td>
+                  <td>{{ item?.email }}</td>
+                  <td>{{ item?.location }}</td>
+                  <td>
+                    <button
+                      (click)="onDeletePartner($event, item._id)"
+                      class="btn btn-primary"
+                    >
+                      Delete
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="center">
+      <div class="col-md-6">
+        <div class="col-sm-12 col-md-6"></div>
+        <form #authForm="ngForm" (ngSubmit)="onAddPartner(authForm.value)">
+          <div class="form-row">
+            <div class="form-group col-md-12">
+              <label>Partner Email:</label>
+              <input
+                type="text"
+                class="form-control"
+                id="name"
+                name="email"
+                required
+                ngModel
+              />
+            </div>
+          </div>
+          <button
+            class="btn btn-info btn-block btn-round"
+            type="submit"
+            [disabled]="!authForm.valid"
+          >
+            Add partner
+          </button>
+        </form>
+      </div>
+    </div>
+    <hr />
+    <hr />
+    <hr />
+  </div>
+</div>
