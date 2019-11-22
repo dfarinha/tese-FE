@@ -7,8 +7,6 @@ import { JwBootstrapSwitchNg2Module } from 'jw-bootstrap-switch-ng2';
 import { RouterModule } from '@angular/router';
 
 import { BasicelementsComponent } from './basicelements/basicelements.component';
-import { NavigationComponent } from './navigation/navigation.component';
-import { TypographyComponent } from './typography/typography.component';
 import { NucleoiconsComponent } from './nucleoicons/nucleoicons.component';
 import { ComponentsComponent } from './components.component';
 
@@ -25,9 +23,7 @@ import { ComponentsComponent } from './components.component';
     declarations: [
         ComponentsComponent,
         BasicelementsComponent,
-        NavigationComponent,
-        TypographyComponent,
-        NucleoiconsComponent,
+        NucleoiconsComponent
     ],
     exports:[ ComponentsComponent ]
 })
