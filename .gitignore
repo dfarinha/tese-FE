@@ -4,7 +4,7 @@
 /dist
 /tmp
 /out-tsc
-
+.VSCodeCounter
 # dependencies
 /node_modules
 package-lock.json
